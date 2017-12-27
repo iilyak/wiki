@@ -1,0 +1,8 @@
+serve:
+  summary: Start wiki server
+  command: bin/node TiddlyWiki5/tiddlywiki.js wiki/ --server
+
+# https://github.com/Jermolene/TiddlyWiki5/issues/987#issuecomment-59643491
+build.work:
+  summary: Build spaces/work section of the wiki
+  command: echo bin/node TiddlyWiki5/tiddlywiki.js wiki/ --rendertiddlers [tag[spaces/work]] $:/save.by.tag work.html text-plain
